@@ -22,7 +22,7 @@ func main() {
 			panic(err)
 		}
 
-		searchDir = executableDir
+		searchDir = filepath.Dir(executableDir)
 	}
 
 	searchDirInfo, err := os.Stat(searchDir)
